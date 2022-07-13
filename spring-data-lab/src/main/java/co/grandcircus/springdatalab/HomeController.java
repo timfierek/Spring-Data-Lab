@@ -22,7 +22,7 @@ public class HomeController {
 	public String listGrades(Model model) {
 		List<Grade> grades = repo.findAll();	
 		
-		
+		model.addAttribute("grades", grades);
 		
 		return "ListGrades";
 	}

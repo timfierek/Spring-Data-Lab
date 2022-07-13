@@ -20,12 +20,13 @@
 				<th>Score</th>
 				<th>Total</th>
 			</tr>
-			<c:forEach var="grade" items="${repo.findAll()}">
+			<c:forEach var="grade" items="${grades}">
 				<tr>
-					<td>"${grade.name}"</td>
-					<td>"${grade.type}"</td>
-					<td>"${grade.score}"</td>
-					<td>"${grade.total}"</td>
+					<td>${grade.name}</td>
+					<td>${grade.type}</td>
+					<td>${grade.score}</td>
+					<td>${grade.total}</td>
+					<td><a href="/DeleteGrade">Delete</a></td>
 				</tr>
 			</c:forEach>
 		</table>
