@@ -7,9 +7,27 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add Grade</title>
+<title>Add a Grade</title>
 </head>
 <body>
-
+	<h1>Add a Grade</h1>
+	
+	<form action="/AddGradeConfirmation" method="post">
+		<input type=hidden name="id" value="${grade.id}">
+		
+		<b>Name</b> <input name="name" type="text" min=1 max=30><br><br>
+		
+		<b>Type</b> <select name="type">
+			<option value="Assignment">Assignment</option>
+			<option value="Quiz">Quiz</option>
+			<option value="Exam">Exam</option>			
+		</select><br><br>
+		
+		<b>Score</b> <input name="score" type="number" step="0.01" min=0><br><br>
+		
+		<b>Total</b> <input name="total" type="number" step="0.01" min=0><br><br>
+		
+		<input type="submit" value="Add"> <a href="/">Cancel</a>
+	</form>
 </body>
 </html>

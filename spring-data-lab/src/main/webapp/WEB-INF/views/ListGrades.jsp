@@ -20,16 +20,20 @@
 				<th>Score</th>
 				<th>Total</th>
 			</tr>
+			
 			<c:forEach var="grade" items="${grades}">
 				<tr>
-					<td>${grade.name}</td>
-					<td>${grade.type}</td>
+					<td><c:out value="${grade.name}"/></td>
+					<td><c:out value="${grade.type}"/></td>
 					<td>${grade.score}</td>
 					<td>${grade.total}</td>
-					<td><a href="/DeleteGrade">Delete</a></td>
+					<td><a href="/delete-grade?id=${grade.id}">Delete</a></td>
 				</tr>
 			</c:forEach>
 		</table>
 	</div>
+	
+	<br>
+	<a href="/AddGrade">Add a Grade</a>
 </body>
 </html>

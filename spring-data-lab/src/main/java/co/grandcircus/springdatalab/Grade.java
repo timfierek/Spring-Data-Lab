@@ -5,7 +5,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document("grades")
 public class Grade {
-	@Id
+	@Id 
 	private String id;
 	private String name;
 	private String type;
@@ -52,6 +52,14 @@ public class Grade {
 
 	public void setTotal(double total) {
 		this.total = total;
+	}
+	
+	public String getId() {
+		return id;
+	}
+	
+	public void setId(String id) {
+		this.id = id;
 	}
 	
 	

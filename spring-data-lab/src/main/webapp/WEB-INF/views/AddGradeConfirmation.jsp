@@ -7,9 +7,17 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Grade Successfully Added</title>
+<title>Grade Successfully Added!</title>
 </head>
 <body>
-
+	<h1>Grade Added</h1>
+	
+	The grade was added to the database.
+	
+	<h3>Details</h3>
+	<b>Name: </b><c:out value="${name}"/><br><br>
+	<b>Type: </b><c:out value="${type}"/><br><br>
+	<b>Score: </b><fmt:formatNumber value="${score}" pattern="#.#"/><br><br>
+	<b>Total: </b><fmt:formatNumber value="${total}" pattern="#.#"/><br><br>
 </body>
 </html>
