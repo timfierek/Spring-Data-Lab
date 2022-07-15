@@ -21,6 +21,13 @@ public class Grade {
 		this.score = score;
 		this.total = total;
 	}
+	
+	public Grade(String name, String type, double score, double total) {
+		this.name = name;
+		this.type = type;
+		this.score = score;
+		this.total = total;
+	}
 
 	public String getName() {
 		return name;

@@ -38,15 +38,23 @@ public class HomeController {
 	}
 	
 	@PostMapping("/AddGradeConfirmation")
-	public String addGradeConfirmation(Model model, @RequestParam String id, @RequestParam String name, @RequestParam String type, @RequestParam double score, @RequestParam double total) {
+	public String addGradeConfirmation(Model model, @RequestParam (required=false) String id, @RequestParam String name, @RequestParam String type, @RequestParam double score, @RequestParam double total) {
+		Grade updatedGrade;
+		
+		if(id.equals(null) || id.equals("")) {
+			updatedGrade = new Grade(name, type, score, total);
+
+		}else {
+			updatedGrade = new Grade(id, name, type, score, total);
+		}
+		
 		model.addAttribute("id", id);
 		model.addAttribute("name", name); 
 		model.addAttribute("type", type);
 		model.addAttribute("score", score);
 		model.addAttribute("total", total);
 		
-		Grade grade = new Grade(id, name, type, score, total);
-		repo.insert(grade);
+		repo.insert(updatedGrade);
 
 		return("AddGradeConfirmation");
 	}

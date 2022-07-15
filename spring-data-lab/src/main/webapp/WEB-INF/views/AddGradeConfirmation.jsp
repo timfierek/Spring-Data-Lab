@@ -19,5 +19,7 @@
 	<b>Type: </b><c:out value="${type}"/><br><br>
 	<b>Score: </b><fmt:formatNumber value="${score}" pattern="#.#"/><br><br>
 	<b>Total: </b><fmt:formatNumber value="${total}" pattern="#.#"/><br><br>
+	
+	<a href="/">Return to grade list</a>
 </body>
 </html>
